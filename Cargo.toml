@@ -1,0 +1,9 @@
+[package]
+name = "md2web"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+md2html = { path = "../md2html/new/md2html" }
