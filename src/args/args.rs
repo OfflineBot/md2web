@@ -19,18 +19,13 @@ pub fn handle_args() -> std::io::Result<()> {
             if argv[1].trim() == "setup" {
                 setup(main_path, target);
             } else if argv[1].trim() == "create" {
-                create(main_path, target, None)
+                create(main_path, target)
             } else if argv[1].trim() == "clean" {
                 clean(main_path, target);
             } else {
                 println!("invalid argument");
             }
         }, 
-        3 => {
-            if argv[1].trim() == "create" {
-                create(main_path, target, Some(argv[2].replace(".md", "").clone()));
-            }
-        }
         _ => println!("Invalid amount of arguments"),
     }
 

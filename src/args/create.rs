@@ -2,15 +2,12 @@ use std::io::{Read, Write};
 
 use md2html::{Settings, md_to_html};
 use crate::Files;
-pub fn create(main_path: String, target: String, index: Option<String>) {
+pub fn create(main_path: String, target: String) {
     let mut files = Files::new(main_path.clone());
     files.get_files();
     files.filter();
 
-    match index {
-        Some(data) => files.set_index(data),
-        None => {},
-    }
+
 
     let settings = Settings::default();
 
