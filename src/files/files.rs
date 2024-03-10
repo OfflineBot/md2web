@@ -59,7 +59,7 @@ impl Files {
             ).unwrap();
         }
     }
-
+    // get all .md files
     pub fn filter(&mut self) {
         let mut file_vec: Vec<String> = Vec::new(); 
         for file in self.files.iter() {
@@ -69,6 +69,17 @@ impl Files {
         }
         self.files = file_vec;
     }
+
+    pub fn set_index(&mut self, index: String) {
+        let mut out: Vec<String> = Vec::new();
+        let search = index + ".md";
+        for file in self.files.iter() {
+            if file.contains(search.as_str()) {
+                out.push(file.replace(&search, "index.md"));
+            }
+        }  
+        self.files = out;
+    } 
 
     pub fn print_files(&self) {
         println!("{:#?}", self.files);
