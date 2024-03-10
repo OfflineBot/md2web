@@ -5,7 +5,7 @@ version = 3
 [[package]]
 name = "md2html"
 version = "0.1.0"
-source = "git+https://github.com/OfflineBot/md2html.git#9eb44f09edf829964ae5d35e695a0653313eb243"
+source = "git+https://github.com/OfflineBot/md2html.git#1ddc5f43402d3cbdb643e17fa2c370d1cbce99cc"
 
 [[package]]
 name = "md2web"
